@@ -1,12 +1,15 @@
 
 import './App.css'
-import Card from './components/Card'
+import CharacterList from './components/CharacterList';
+import { charactersData } from "./data"
 
 function App() {
 
   return (
     <>
-    <Card/>
+
+    <CharacterList data={charactersData}/>
+    
     </>
   )
 }

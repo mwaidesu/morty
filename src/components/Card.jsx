@@ -1,34 +1,43 @@
-const Card = () => {
+import PropTypes from 'prop-types';
+
+const Card = (props) => {
   return (
     <>
-      <div className="max-w-sm rounded overflow-hidden shadow-lg">
+      <div className="max-w-sm rounded-lg overflow-hidden shadow-lg m-5 bg-white w-80">
         <img
           className="w-full"
-          src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={props.image}
           alt="Sunset in the mountains"
         />
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+          <div className="font-bold text-xl mb-2">{props.name}</div>
           <p className="text-gray-700 text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatibus quia, nulla! Maiores et perferendis eaque,
-            exercitationem praesentium nihil.
+           {props.status}
           </p>
         </div>
         <div className="px-6 pt-4 pb-2">
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            photography
+            {props.origin}
           </span>
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            travel
+            {props.species}
           </span>
           <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            winter
+            {props.gender}
           </span>
         </div>
       </div>
     </>
   );
 };
+
+Card.propTypes = {
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  origin: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
+  species: PropTypes.string.isRequired,
+  gender: PropTypes.string.isRequired,
+}
 
 export default Card;
