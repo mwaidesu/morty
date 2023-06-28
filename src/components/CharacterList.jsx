@@ -4,8 +4,8 @@ import Card from "./Card";
 
 const CHARACTERS_QUERY = gql`
   {
-    characters {
-      results {
+    characters  {
+      results  {
         id
         name
         image
@@ -28,7 +28,7 @@ const CharactersList = () => {
 
   return data.characters.results.map(character => (
 
-    <div key={character.id} className="mt-4">
+    <div key={character.id} className="mt-6">
       <Card        
         id={character.id}
         image={character.image}
