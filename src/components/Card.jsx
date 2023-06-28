@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Card = (props) => {
   return (
     <>
-      <div className="max-w-sm rounded-lg overflow-hidden shadow-lg m-5 bg-white w-80">
+      <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white w-80 min-h-full m-4">
         <img
           className="w-full"
           src={props.image}
@@ -32,12 +32,12 @@ const Card = (props) => {
 };
 
 Card.propTypes = {
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  origin: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
-  species: PropTypes.string.isRequired,
-  gender: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  name: PropTypes.string,
+  origin: PropTypes.string,
+  status: PropTypes.string,
+  species: PropTypes.string,
+  gender: PropTypes.string,
 }
 
 export default Card;
